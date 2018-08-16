@@ -63,6 +63,11 @@ cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 export PATH=/usr/local/php/bin:$PATH
 export PATH=/usr/local/php/sbin:$PATH
 
+cd /tmp/php-7.2.8/ext/fileinfo
+phpize
+./configure
+make & make install
+
 # cd /tmp
 # wget https://codeload.github.com/phpredis/phpredis/tar.gz/4.1.0 -O phpredis-4.1.0.tar.gz
 # tar xzf phpredis-4.1.0.tar.gz
@@ -82,6 +87,7 @@ cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/ww
 sed -i 's/;error_log = .*/error_log = \/tmp\/php_error.log/' /usr/local/php/etc/php.ini
 echo 'extension=igbinary.so' >> /usr/local/php/etc/php.ini
 echo 'extension=redis.so' >> /usr/local/php/etc/php.ini
+echo 'extension=fileinfo.so' >> /usr/local/php/etc/php.ini
 
 sed -i '1,3d' /etc/nginx/nginx.conf
 sed -i '1i\daemon off;' /etc/nginx/nginx.conf
