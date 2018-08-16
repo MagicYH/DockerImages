@@ -5,6 +5,8 @@ MAINTAINER magic
 COPY cmd.sh /cmd.sh
 RUN /bin/bash /cmd.sh
 
+ENV PATH=/usr/local/php/bin:/usr/local/php/sbin:$PATH
+
 # add user linux, this user will be user by nginx and php
 RUN adduser -u 1000 linux
 RUN mkdir -p /var/log/nginx/
