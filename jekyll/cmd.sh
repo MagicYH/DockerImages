@@ -12,4 +12,5 @@ rvm install 2.4
 gem install jekyll
 gem install bundle
 
+yum remove which
 yum clean all
