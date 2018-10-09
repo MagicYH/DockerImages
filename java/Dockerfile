@@ -1,0 +1,15 @@
+FROM centos:7
+
+MAINTAINER magic
+
+ENV BASE_PATH /usr/local/software
+ENV JDK_VERSION jdk-11
+
+ENV JAVA_HOME=$BASE_PATH/$JDK_VERSION
+ENV CLASSPATH=.:${JAVA_HOME}/lib
+ENV PATH=${JAVA_HOME}/bin:$PATH
+
+COPY ${JDK_VERSION} ${BASE_PATH}/${JDK_VERSION}
+
+# COPY cmd.sh /cmd.sh
+# RUN /bin/bash /cmd.sh

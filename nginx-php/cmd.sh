@@ -77,6 +77,12 @@ pecl install mongodb
 yes | pecl install redis
 yes | pecl install swoole
 
+# install fileinfo extension
+cd /tmp/$PHP_SOURCE/ext/fileinfo
+phpize
+./configure
+make & make install
+
 # php-fpm config
 sed -i 's/user = .*/user = linux/' $PHP_HOME/etc/php-fpm.d/www.conf.default
 sed -i 's/group = .*/group = linux/' $PHP_HOME/etc/php-fpm.d/www.conf.default
@@ -93,6 +99,7 @@ echo 'extension=igbinary.so' >> $PHP_HOME/etc/php.ini
 echo 'extension=redis.so' >> $PHP_HOME/etc/php.ini
 echo 'extension=mongodb.so' >> $PHP_HOME/etc/php.ini
 echo 'extension=swoole.so' >> $PHP_HOME/etc/php.ini
+echo 'extension=fileinfo.so' >> $PHP_HOME/etc/php.ini
 
 
 # install openresty
