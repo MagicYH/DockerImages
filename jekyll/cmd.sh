@@ -12,4 +12,8 @@ rvm install 2.4
 gem install jekyll
 gem install bundle
 
+m /etc/localtime
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+yum remove which
 yum clean all

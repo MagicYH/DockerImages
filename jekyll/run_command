@@ -1,1 +1,0 @@
-sudo docker run -p 80:80 -v /home/linux/Docker/phpx.x/nginx_hosts:/usr/local/nginx/conf/include -v /mnt/hgfs/Project:/mnt/hgfs/Project --name=php7 9e1b07ce31dd supervisord
