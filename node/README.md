@@ -1,0 +1,1 @@
+nginx + php7.2 + supervisor
