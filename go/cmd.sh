@@ -9,6 +9,7 @@ yum install -y supervisor
 yum install -y net-tools
 yum install -y wget
 yum install -y vim
+yum install -y git
 
 mkdir -p $BASE_PATH
 cd $BASE_PATH
