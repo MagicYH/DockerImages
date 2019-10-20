@@ -1,6 +1,6 @@
 FROM python:3.8.0
 
-MAINTAINER magic
+MAINTAINER magicyh
 
 WORKDIR /usr/src/app
 

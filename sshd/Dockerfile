@@ -1,6 +1,6 @@
 FROM centos:7
 
-MAINTAINER magic
+MAINTAINER magicyh
 
 ENV ROOT_PASSWORD 123456
 
