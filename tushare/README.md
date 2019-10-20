@@ -1,0 +1,1 @@
+use command `pip freeze > requirements.txt` to export pip requirements
